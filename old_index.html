@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Madeira Travel Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://cesarvigario.github.io/madeira/images/madeira-view.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .carousel {
+            max-width: 640px; /* 80% of 800px */
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .carousel .slick-slide {
+            height: 320px; /* 80% of 400px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover the entire slide without stretching */
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ffcc00;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .tab-button:hover, .tab-button.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 20px;
+            color: #ffcc00;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            background: linear-gradient(to right, #ffcc00, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .list-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .list-item:before {
+            content: "\2022";
+            margin-right: 10px;
+            color: #ffcc00;
+        }
+        .list-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira1.jpg" alt="Madeira Image 1"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira2.jpg" alt="Madeira Image 2"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira3.jpg" alt="Madeira Image 3"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira4.jpg" alt="Madeira Image 4"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira5.jpg" alt="Madeira Image 5"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira6.jpg" alt="Madeira Image 6"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira7.jpg" alt="Madeira Image 7"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira8.jpg" alt="Madeira Image 8"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira9.jpg" alt="Madeira Image 9"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira10.jpg" alt="Madeira Image 10"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira11.jpg" alt="Madeira Image 11"></div>
+        <div><img src="https://cesarvigario.github.io/madeira/images/madeira12.jpg" alt="Madeira Image 12"></div>
+    </div>
+    <div class="container">
+        <h1>Programação Madeira</h1>
+    
+    <section id="schedule">
+        <h2>Itinerário Diário</h2>
+        <table>
+            <tr>
+                <th>Dias</th>
+                <th>1 (Quinta)</th>
+                <th>2 (Sexta)</th>
+                <th>3 (Sábado)</th>
+                <th>4 (Domingo)</th>
+                <th>5 (Segunda)</th>
+                <th>6 (Terça)</th>
+                <th>7 (Quarta)</th>
+                <th>8 (Quinta)</th>
+            </tr>
+            <tr>
+                <td>Saída de casa</td>
+                <td>08h00 chegam à Madeira JP</td>
+                <td>Lili: 09h30<br>João: 09h15</td>
+                <td>Lili: 09h00<br>João: 08h30</td>
+                <td>Lili: 08h20<br>João: 08h00</td>
+                <td>Lili: 07h45<br>João: 08h10</td>
+                <td>Lili:10h00<br>João: 10h00</td>
+                <td>09h30<br>Check out</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Manhã</td>
+                <td>
+                    <ul>
+                        <li>MUSEU CR7 (abre às 10h00)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Poço dos chefes curral das freiras (24MIN ATÉ CASA)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Parque florestal das queimadas (passeio)</li>
+                        <li>Porto Moniz</li>
+                        <li>Teleférico das achadas da cruz (23 MINUTOS)</li>
+                        <li>Piscinas naturais do Porto Moniz (A PÉ 8 MIN)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Piscinas naturais velhas</li>
+                        <li>Cabo girão</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Museu da baleia</li>
+                        <li>Mercado dos lavradores (abertura às 07h00) (23 MIN DO AEROPORTO)</li>
+                        <li>De seguida ir a um hipermercado fazer compras para as refeições</li>
+                        <li>Sugestão caso tenham que fazer tempo: Praia da calheta (11 MIN CASA MÃO CHEIA)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Parque temático de santana</li>
+                    </ul>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Almoço</td>
+                <td>
+                    <ul>
+                        <li>14h00 check in casa</li>
+                        <li>Casa do bolo do caco</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Piquenique (Sugestão: Frango churrasco comprado no dia anterior no continente mais salada e pão)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Piquenique (sugestão: Pão com paté ou quiche já comprada no continente)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Piquenique (Sugestão: -Wraps com Ovos cozidos, salsichas, Alface)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>SNACK BAR Balcony (picadinho da madeira, caco... etc)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Muralhas bar</li>
+                    </ul>
+                </td>
+                <td>12h00 aeroporto madeira família P.V</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tarde</td>
+                <td>
+                    <ul>
+                        <li>15H chegada à Madeira</li>
+                        <li>15h00 NAU COLOMBO check in 14h30 -- 15h às 18h00</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Carreiros do Monte - Descida Carro de Cestos</li>
+                        <li>Camacha (fecha às 18h) (38 MINUTOS)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Jardim botânico da Madeira (9min)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Praia do faial (20 min)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Praia do Machico (distância de carro 10 min)</li>
+                        <li>Piscinas Naturais do Seixal, Seixal (distância de carro 4 minutos)</li>
+                        <li>Cascata véu da Noiva (20 min)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Quinta vigia (Residência oficial do presidente da Madeira) 16h00</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Praia do Machico (2/3 min)</li>
+                        <li>Ou Complexo Balnear do Lido</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Parque Desportivo andorinha (25 MIN AEROPORTO)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Extras</td>
+                <td>
+                    <ul>
+                        <li>CR7 football playground (12 min)</li>
+                        <li>Se der tempo: Mercado dos lavradores fecha às 19h00</li>
+                        <li>Caso se tenha tempo e acabar o dia na praia de vigário</li>
+                        <li>Por fim passar na taberna da poncha</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>18h00 aeroporto madeira família JP</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>LILI: Mercado dos lavradores</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Jantar</li>
+                        <li>Cada um na sua casa (Para dormirem o suficiente para a semana inteira)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Casa do farol (câmara de lobos) --> Beber a melhor poncha e niquita à pescador)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Cada um na sua casa</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Restaurante praia dos reis magos (comer peixe espada) (20 MIN)</li>
+                        <li>E após jantar ver o Cristo Rei (8 MIN)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Cada um na sua casa</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true
+            });
+
+            $('.tab-button').click(function() {
+                var tab_id = $(this).attr('data-tab');
+
+                $('.tab-button').removeClass('active');
+                $('.tab-content').removeClass('active');
+
+                $(this).addClass('active');
+                $("#" + tab_id).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
